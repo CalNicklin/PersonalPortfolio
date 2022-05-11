@@ -32,7 +32,7 @@ a:visited {
     }
 
 /* Header uses a sub grid to position logo and 'nav' elements */
-    header {
+    nav {
         display: grid;
         flex-direction: column;
         grid-column-start: 1;
