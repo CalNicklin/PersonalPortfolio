@@ -1,7 +1,7 @@
 body {
     font-family: 'aktiv-grotesk-thin';
     font-size: 16px;
-    color: black;
+    color: rgb(20, 20, 20);
 }
 
 h1 {
@@ -24,14 +24,13 @@ a:visited {
 }
 
 @media only screen and (min-width: 960px) {
-    body {
+    .gridWrapper {
         display: grid;
-        grid-template-columns: repeat(32, 30px);
-        grid-template-rows: repeat(23, 30px);
-        grid-auto-rows: 30px;
+        grid-template-columns: repeat(32, 1fr);
+        grid-template-rows: repeat(32, 30px);
     }
 
-/* Header uses a sub grid to position logo and 'nav' elements */
+/* nav positions logo and 'nav' div elements */
     nav {
         display: grid;
         grid-column: span 5;
@@ -40,7 +39,7 @@ a:visited {
         grid-template-rows: repeat(23, 30px);
         border-right: 1px solid grey;
     }
-    /* Grid-areas based on header subgrid. ONLY WORKS FOR FIREFOX */
+
     .myName {
         grid-area: 2 / 2 / 5 / 4;
     }
@@ -62,6 +61,7 @@ a:visited {
         grid-area: 8 / 2 / 9 / 4;
     }
 
+/* main section */
     main {
         display: grid;
         grid-area: 6 / 8 / 14 / 30;
@@ -89,9 +89,9 @@ a:visited {
         text-transform: capitalize;
     }
 
-    .projectTitle h4 {
+    .projectTitle h5 {
         margin: 1vh 0;
-        color: grey;
+        color: rgb(20, 20, 20);
     }
 
     .projectDescription {
