@@ -26,7 +26,7 @@ a:visited {
 @media only screen and (min-width: 960px) {
     body {
         display: grid;
-        grid-template-columns: repeat(32, 1fr);
+        grid-template-columns: repeat(32, 30px);
         grid-template-rows: repeat(23, 30px);
         grid-auto-rows: 30px;
     }
@@ -34,16 +34,12 @@ a:visited {
 /* Header uses a sub grid to position logo and 'nav' elements */
     nav {
         display: grid;
-        flex-direction: column;
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        grid-row-end: 24;
-        grid-template-columns: subgrid;
-        grid-template-rows: subgrid;
+        grid-column: span 5;
+        grid-row: span 23;
+        grid-template-columns: repeat(5, 30px);
+        grid-template-rows: repeat(23, 30px);
         border-right: 1px solid grey;
     }
-
     /* Grid-areas based on header subgrid. ONLY WORKS FOR FIREFOX */
     .myName {
         grid-area: 2 / 2 / 5 / 4;
@@ -64,6 +60,60 @@ a:visited {
 
     .contact {
         grid-area: 8 / 2 / 9 / 4;
+    }
+
+    main {
+        display: grid;
+        grid-area: 6 / 8 / 14 / 30;
+        grid-template-columns: repeat(22, 30px);
+        grid-template-rows: repeat(20, 30px);
+    }
+
+    .projectContainer {
+        display: grid;
+        grid-row: span 10;
+        grid-column: span 22;
+        grid-template-columns: repeat(22, 30px);
+        grid-template-rows: repeat(10, 30px);
+        padding-left: 2px;
+        border-top: 1px solid grey;
+    }
+
+    .projectTitle {
+        grid-row: 2 / 4;
+        grid-column: span 11;
+    }
+
+    .projectTitle h2 {
+        margin: 0vh 0;
+        text-transform: capitalize;
+    }
+
+    .projectTitle h4 {
+        margin: 1vh 0;
+        color: grey;
+    }
+
+    .projectDescription {
+        grid-area: 5 / 1 / 7 / 12;
+    }
+
+    .projectLink {
+        grid-area: 9 / 1 / 10 / 6;
+    }
+
+    .projectLink h4 {
+        margin: 0;
+    }
+
+    .projectImage {
+        grid-area: 2 / 13 / 10 / 23;
+        overflow: hidden;
+    }
+
+    .projectImage img {
+        max-height: 100%;
+        overflow: hidden;
     }
 }
 

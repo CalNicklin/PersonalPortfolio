@@ -6,6 +6,8 @@
 + HTML - with a11y, ARIA, semantic HTML implemented.
 + CSS - making use of wireframing, grid, responsive design, and, flexbox.
 + JS - dropdowns, changing html styles after interactions.
+    Create innerHTML for projectDescription?
+    Show current page.
 + Git - deployed on the command line and version controlled, and finally, viewable using GitHub pages.
 
 *Enjoy!*
