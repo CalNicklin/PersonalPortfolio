@@ -14,7 +14,7 @@ function darkMode() {
     document.body.style.color = 'white';
     document.body.style.backgroundColor = 'black';
     nav.style.borderRight = '1px solid white';
-    if (width >= 970) {
+    if (width >= 960) {
         wrap.style.border = '1px solid white';
     };
     for (link of links) {
