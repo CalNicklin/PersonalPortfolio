@@ -1,7 +1,8 @@
 body {
     font-family: 'aktiv-grotesk-thin';
     font-size: 16px;
-    color: rgb(20, 20, 20);
+    color: black;
+    line-height: normal;
 }
 
 h1 {
@@ -26,18 +27,19 @@ a:visited {
 @media only screen and (min-width: 960px) {
     .gridWrapper {
         display: grid;
-        grid-template-columns: repeat(32, 1fr);
-        grid-template-rows: repeat(32, 30px);
+        grid-template-columns: repeat(29, 1fr);
+        grid-template-rows: repeat(29, 30px);
+        border: 1px solid black;
     }
 
 /* nav positions logo and 'nav' div elements */
     nav {
         display: grid;
         grid-column: span 5;
-        grid-row: span 23;
+        grid-row: span 29;
         grid-template-columns: repeat(5, 30px);
         grid-template-rows: repeat(23, 30px);
-        border-right: 1px solid grey;
+        border-right: 1px solid black;
     }
 
     .myName {
@@ -76,7 +78,7 @@ a:visited {
         grid-template-columns: repeat(22, 30px);
         grid-template-rows: repeat(10, 30px);
         padding-left: 2px;
-        border-top: 1px solid grey;
+        border-top: 1px solid black;
     }
 
     .projectTitle {
@@ -92,10 +94,13 @@ a:visited {
     .projectTitle h5 {
         margin: 1vh 0;
         color: rgb(20, 20, 20);
+        font-style: italic;
     }
 
     .projectDescription {
         grid-area: 5 / 1 / 7 / 12;
+        line-height: 23px;
+
     }
 
     .projectLink {
@@ -114,6 +119,25 @@ a:visited {
     .projectImage img {
         max-height: 100%;
         overflow: hidden;
+    }
+
+    /* About page */
+
+    .profileImg {
+        background-image: url('./resources/img/DSCF7631\ 1.jpg');
+        background-size: cover;
+        background-position: 35% 50%;
+        grid-area: 1 / 1 / 11 / 10;
+    }
+        
+    .bio {
+        grid-area: 1 / 11 / 11 / 23;
+        padding-left: 30px;
+        line-height: 23px;
+    }
+
+    .bio p {
+        margin: 0;
     }
 }
 
