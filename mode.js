@@ -1,4 +1,6 @@
 //Defines elements in DOM
+let width = screen.width;
+let wrap = document.getElementById('gridWrapper');
 let nav = document.getElementById('nav');
 let buttons = document.getElementsByTagName('button');
 let links = document.getElementsByTagName('a');
@@ -12,6 +14,9 @@ function darkMode() {
     document.body.style.color = 'white';
     document.body.style.backgroundColor = 'black';
     nav.style.borderRight = '1px solid white';
+    if (width >= 970) {
+        wrap.style.border = '1px solid white';
+    };
     for (link of links) {
         link.style.color = 'white';
     };
@@ -31,6 +36,7 @@ function lightMode() {
     document.body.style.color = '';
     document.body.style.backgroundColor = '';
     nav.style.borderRight = '';
+    wrap.style.border = '';
     for (link of links) {
         link.style.color = '';
     };
