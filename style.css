@@ -29,7 +29,6 @@ a:visited {
         display: grid;
         grid-template-columns: repeat(29, 1fr);
         grid-template-rows: repeat(29, 30px);
-        border: 1px solid black;
     }
 
 /* nav positions logo and 'nav' div elements */
@@ -66,7 +65,7 @@ a:visited {
 /* main section */
     main {
         display: grid;
-        grid-area: 6 / 8 / 14 / 30;
+        grid-area: 6 / 10 / 14 / 30;
         grid-template-columns: repeat(22, 30px);
         grid-template-rows: repeat(20, 30px);
     }
@@ -140,6 +139,132 @@ a:visited {
         margin: 0;
     }
 }
+
+@media only screen and (max-width: 960px) {
+    .gridWrapper {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(30, 30px);
+        border: 1px solid black;
+    }
+
+/* nav positions logo and 'nav' div elements */
+    nav {
+        display: grid;
+        grid-column: span 20;
+        grid-row: span 4;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(4, 30px);
+        border-bottom: 1px solid black;
+    }
+
+    .myName {
+        grid-area: 2 / 2 / 5 / 4;
+    }
+
+    .myName h1 {
+        min-width: 0;
+        margin: 0;
+    }
+
+    .projects {
+        grid-area: 2 / 16 / 3 / 19;
+    }
+
+    .about {
+        grid-area: 3 / 16 / 4 / 19;
+    }
+
+    .contact {
+        grid-area: 4 / 16 / 5 / 19;
+    }
+
+/* main section */
+    main {
+        display: grid;
+        grid-column: span 20;
+        grid-row: span 30;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(30, 30px);
+    }
+
+    .projectContainer {
+        display: grid;
+        grid-row: span 12;
+        grid-column: span 22;
+        grid-template-columns: repeat(22, 1fr);
+        grid-template-rows: repeat(12, 30px);
+    }
+
+    .projectTitle {
+        grid-area: 2 / 2 / 4 / 13;
+}
+
+    .projectTitle h2 {
+        margin: 0vh 0;
+        text-transform: capitalize;
+    }
+
+    .projectTitle h5 {
+        margin: 1vh 0;
+        color: rgb(20, 20, 20);
+        font-style: italic;
+    }
+
+    .projectDescription {
+        grid-area: 5 / 2 / 7 / 12;
+        line-height: 23px;
+
+    }
+
+    .projectLink {
+        grid-area: 11 / 2 / 12 / 6;
+    }
+
+    .projectLink h4 {
+        margin: 0;
+    }
+
+    .projectImage {
+        grid-area: 2 / 13 / 10 / 22;
+        overflow: hidden;
+    }
+
+    .projectImage img {
+        max-height: 100%;
+        
+    }
+
+    /* About page */
+
+    .profileImg {
+        background-image: url('./resources/img/DSCF7631\ 1.jpg');
+        background-size: cover;
+        background-position: 50% 40%;
+        grid-area: 1 / 1 / 11 / 22;
+    }
+        
+    .bio {
+        grid-area: 13 / 2 / 20 / 20;
+        line-height: 23px;
+    }
+
+    .bio p {
+        margin: 0;
+    }
+
+    /* Contact Form */
+
+    #contactForm {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    #contactForm #message {
+        width: 200px;
+    }
+}
+
 
 
 
