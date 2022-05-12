@@ -10,7 +10,7 @@ h1 {
     font-size: 2rem;
 }
 
-a:link {
+a {
     text-decoration: none;
     font-size: 1.2rem;
     color: black;
@@ -295,8 +295,3 @@ button:hover {
         width: 200px;
     }
 }
-
-
-
-
-
