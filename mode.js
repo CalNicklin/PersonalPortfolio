@@ -1,3 +1,19 @@
+//  Jasper's version
+
+function changeMode(event){
+    event.preventDefault()
+    event.stopPropagation()
+    document.body.setAttribute('class', '')
+    document.body.classList.add(event.target.dataset.mode)
+    return false
+  }
+  
+  var buttons = document.querySelectorAll('.switcher')
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', changeMode);
+  }
+
+
 //Defines elements in DOM
 let width = screen.width;
 let wrap = document.getElementById('gridWrapper');
